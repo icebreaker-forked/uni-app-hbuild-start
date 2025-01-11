@@ -1,0 +1,42 @@
+{
+  "common": {
+    "uni.app.quit": "Колдонмодон чыгуу үчүн кайра басыңыз",
+    "uni.async.error": "Серверге туташуу убакыты бүттү, кайра аракет кылуу үчүн экранды чыкылдатыңыз",
+    "uni.showActionSheet.cancel": "Жокко чыгаруу",
+    "uni.showToast.unpaired": "ShowToast жана hideToast жуптарда колдонулушу керек экенин эске алыңыз",
+    "uni.showLoading.unpaired": "ShowLoading жана hideLoading жупташып колдонулушу керек экенин эске алыңыз",
+    "uni.showModal.cancel": "Жокко чыгаруу",
+    "uni.showModal.confirm": "Албетте",
+    "uni.chooseImage.cancel": "Жокко чыгаруу",
+    "uni.chooseImage.sourceType.album": "Альбомдон тандаңыз",
+    "uni.chooseImage.sourceType.camera": "атуу",
+    "uni.chooseVideo.cancel": "Жокко чыгаруу",
+    "uni.chooseVideo.sourceType.album": "Альбомдон тандаңыз",
+    "uni.chooseVideo.sourceType.camera": "атуу",
+    "uni.previewImage.cancel": "Жокко чыгаруу",
+    "uni.previewImage.button.save": "сүрөттү сактоо",
+    "uni.previewImage.save.success": "Сүрөттү альбомго ийгиликтүү сактаңыз",
+    "uni.previewImage.save.fail": "Сүрөт альбомго сакталбай калды",
+    "uni.setClipboardData.success": "Мазмун көчүрүлдү",
+    "uni.scanCode.title": " ",
+    "uni.scanCode.album": " ",
+    "uni.scanCode.fail": " ",
+    "uni.scanCode.flash.on": " ",
+    "uni.scanCode.flash.off": " ",
+    "uni.startSoterAuthentication.authContent": "Манжа изин таануу жүрүп жатат...",
+    "uni.picker.done": "Бүтүрүү",
+    "uni.picker.cancel": "Жокко чыгаруу",
+    "uni.video.danmu": "Барраж",
+    "uni.video.volume": "Барраж",
+    "uni.button.feedback.title": "Көйгөй пикир",
+    "uni.button.feedback.send": "жөнөтүү"
+  },
+  "ios": {
+    "NSPhotoLibraryUsageDescription": "FLY-POST сизге экспресс декларацияны тез толтурууга жардам берүү үчүн сатып алуунузду тактоочу документтерди  жүктөө үчүн фотоальбомдон уруксат берууну сурайт.Эгер суроолорунуз жок болсо, томонку шартты аткарбоого тийишсиз.Экспресс жеткирүү декларациясын толтуруу үчүн башка бетти кол менен толтурууну тандай аласыз.",
+    "NSCameraUsageDescription": "FLY-POST сиздин камераңыздан логистикалык буйрутмаңыздын штрихкодун тез скандоону жана аныктоону суранат.Эгерде сизде кандайдыр бир суроолор болсо, сиз өтүнүчтү четке кагып, тиешелүү логистикалык заказды суроо үчүн логистикалык заказдын номерин кол менен киргизүүнү тандай аласыз."
+  },
+  "android": {
+    "NSPhotoLibraryUsageDescription": "FLY-POST сизге экспресс декларацияны тез толтурууга жардам берүү үчүн сатып алуунузду тактоочу документтерди  жүктөө үчүн фотоальбомдон уруксат берууну сурайт.Эгер суроолорунуз жок болсо, томонку шартты аткарбоого тийишсиз.Экспресс жеткирүү декларациясын толтуруу үчүн башка бетти кол менен толтурууну тандай аласыз.",
+    "NSCameraUsageDescription": "FLY-POST сиздин камераңыздан логистикалык буйрутмаңыздын штрихкодун тез скандоону жана аныктоону суранат.Эгерде сизде кандайдыр бир суроолор болсо, сиз өтүнүчтү четке кагып, тиешелүү логистикалык заказды суроо үчүн логистикалык заказдын номерин кол менен киргизүүнү тандай аласыз."
+  }
+}

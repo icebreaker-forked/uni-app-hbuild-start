@@ -1,0 +1,42 @@
+{
+  "common": {
+    "uni.app.quit": "再按一次退出应用",
+    "uni.async.error": "连接服务器超时，点击屏幕重试",
+    "uni.showActionSheet.cancel": "取消",
+    "uni.showToast.unpaired": "请注意 showToast 与 hideToast 必须配对使用",
+    "uni.showLoading.unpaired": "请注意 showLoading 与 hideLoading 必须配对使用",
+    "uni.showModal.cancel": "取消",
+    "uni.showModal.confirm": "确定",
+    "uni.chooseImage.cancel": "取消",
+    "uni.chooseImage.sourceType.album": "从相册选择",
+    "uni.chooseImage.sourceType.camera": "拍摄",
+    "uni.chooseVideo.cancel": "取消",
+    "uni.chooseVideo.sourceType.album": "从相册选择",
+    "uni.chooseVideo.sourceType.camera": "拍摄",
+    "uni.previewImage.cancel": "取消",
+    "uni.previewImage.button.save": "保存图像",
+    "uni.previewImage.save.success": "保存图像到相册成功",
+    "uni.previewImage.save.fail": "保存图像到相册失败",
+    "uni.setClipboardData.success": "内容已复制",
+    "uni.scanCode.title": " ",
+    "uni.scanCode.album": " ",
+    "uni.scanCode.fail": " ",
+    "uni.scanCode.flash.on": " ",
+    "uni.scanCode.flash.off": " ",
+    "uni.startSoterAuthentication.authContent": "指纹识别中...",
+    "uni.picker.done": "完成",
+    "uni.picker.cancel": "取消",
+    "uni.video.danmu": "弹幕",
+    "uni.video.volume": "音量",
+    "uni.button.feedback.title": "问题反馈",
+    "uni.button.feedback.send": "发送"
+  },
+  "ios": {
+    "NSPhotoLibraryUsageDescription": "FLY-POST请求您的相册权限用于上传您的购买凭证，帮助您快速完成快递申报。当然这不是必须，如果您有疑问。可以选择手动填写页面的内容已完成快递申报。",
+    "NSCameraUsageDescription": "FLY-POST请求您的相机用于快速扫描识别物流单号条形码，以便快速查询您的物流订单。当然这不是必须的，如果您有疑问，可以拒绝请求，并返回，您可以选择手动输入物流单号已查询到相关的物流订单。"
+  },
+  "android": {
+    "NSPhotoLibraryUsageDescription": "FLY-POST请求您的相册权限用于上传您的购买凭证，帮助您快速完成快递申报。当然这不是必须，如果您有疑问。可以选择手动填写页面的内容已完成快递申报。",
+    "NSCameraUsageDescription": "FLY-POST请求您的相机用于快速扫描识别物流单号条形码，以便快速查询您的物流订单。当然这不是必须的，如果您有疑问，可以拒绝请求，并返回，您可以选择手动输入物流单号已查询到相关的物流订单。"
+  }
+}

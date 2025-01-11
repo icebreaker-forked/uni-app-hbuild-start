@@ -1,0 +1,17 @@
+{
+  "common": {
+    "uni.scanCode.title": " ",
+    "uni.scanCode.album": " ",
+    "uni.scanCode.fail": " ",
+    "uni.scanCode.flash.on": " ",
+    "uni.scanCode.flash.off": " "
+  },
+  "ios": {
+    "NSPhotoLibraryUsageDescription": "FLY-POST requests your photo album permission to upload your proof of purchase to help you quickly complete the courier declaration. Of course this is not a must, if you have doubts. You can choose to manually fill in the content of the page to complete the courier declaration.",
+    "NSCameraUsageDescription": "FLY-POST requests your camera to quickly scan and identify the tracking number barcode for quick tracking of your order. Of course, this is not necessary, if you have doubts, you can reject the request and return, you can choose to manually enter the tracking number to query the relevant logistics order."
+  },
+  "android": {
+    "NSPhotoLibraryUsageDescription": "FLY-POST requests your photo album permission to upload your proof of purchase to help you quickly complete the courier declaration. Of course this is not a must, if you have doubts. You can choose to manually fill in the content of the page to complete the courier declaration.",
+    "NSCameraUsageDescription": "FLY-POST requests your camera to quickly scan and identify the tracking number barcode for quick tracking of your order. Of course, this is not necessary, if you have doubts, you can reject the request and return, you can choose to manually enter the tracking number to query the relevant logistics order."
+  }
+}
