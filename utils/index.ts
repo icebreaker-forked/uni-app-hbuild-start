@@ -144,7 +144,7 @@ export const checkVersion = async (businessesCode: number, isManualCheck?: boole
 					content: t('message.Tip.App_Update_Tip'),
 					confirmText: t('message.All.Confirm'),
 					cancelText: t('message.All.Neglect'),
-					confirmColor: getPrimaryColor(),
+					confirmColor: COLOR.primary,
 					success: (res) => {
 						uni.setStorageSync('updateVersionTip', new Date().getTime());
 
