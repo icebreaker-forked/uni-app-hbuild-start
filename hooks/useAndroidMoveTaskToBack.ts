@@ -4,26 +4,14 @@
 export default function useAndroidMoveTaskToBack() {
 	onBackPress(() => {
 
-	const deviceInfo = 	uni.getDeviceInfo()
+		const deviceInfo = uni.getDeviceInfo()
 
-	if(deviceInfo.platform === 'android') {
-		let main = plus.android.runtimeMainActivity();
-		plus.runtime.quit = function () {
-			//@ts-ignore
-			main?.moveTaskToBack(false);
-		};
-	}
-
-		// uni.getDeviceInfo({
-		// 	success(res) {
-
-				
-				
-				
-		// 		if (res.osName == 'android') {
-					
-		// 		}
-		// 	},
-		// })
+		if (deviceInfo.platform === 'android') {
+			let main = plus.android.runtimeMainActivity();
+			plus.runtime.quit = function () {
+				//@ts-ignore
+				main?.moveTaskToBack(false);
+			};
+		}
 	});
 }

@@ -1,7 +1,7 @@
 {
     "name": "Uniapp-Start",
     "appid": "__UNI__EF88F13",
-    "description": "TMS APP",
+    "description": "APP",
     "versionName": "0.0.1",
     "versionCode": 1,
     "transformPx": false,
@@ -58,30 +58,6 @@
                     "privacyDescription": {
                         "NSPhotoLibraryUsageDescription": "Uniapp-Start 请求您的相册权限用于某些功能。",
                         "NSCameraUsageDescription": "Uniapp-Start 请求您的相机用于某些功能。"
-                    }
-                }
-            },
-            "ru": {
-                "name": "Uniapp-Start",
-                "android": {
-                    "strings": {}
-                },
-                "ios": {
-                    "privacyDescription": {
-                        "NSPhotoLibraryUsageDescription": "Uniapp - Start запрашивает разрешения на альбом для некоторых функций.",
-                        "NSCameraUsageDescription": "Uniapp - Start запрашивает вашу камеру для определенных функций."
-                    }
-                }
-            },
-            "ky": { // 吉尔吉斯语
-                "name": "Uniapp-Start",
-                "android": {
-                    "strings": {}
-                },
-                "ios": {
-                    "privacyDescription": {
-                        "NSPhotoLibraryUsageDescription": "Uniapp-Start Белгилүү функциялар үчүн альбомдун уруксатын талап кылынат.",
-                        "NSCameraUsageDescription": "Uniapp-Start камераңыздан белгилүү бир функцияларды талап кылат."
                     }
                 }
             }

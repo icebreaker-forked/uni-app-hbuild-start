@@ -1,1 +1,5 @@
-export default {};
+export default {
+  All:{
+    Hello: '你好',
+  }
+};

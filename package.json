@@ -1,5 +1,5 @@
 {
-  "name": "uni-preset-vue",
+  "name": "uni-app-hbuild-start",
   "version": "0.0.0",
   "scripts": {
     "iconfont": "npx iconfont-uni",
@@ -9,8 +9,7 @@
   "dependencies": {
     "@alova/adapter-uniapp": "^2.0.14",
     "@alova/shared": "^1.1.2",
-    "@dcloudio/uni-app": "3.0.0-4010520240507001",
-    "@vitejs/plugin-vue-jsx": "^5.1.1",
+    "@dcloudio/uni-app": "3.0.0-4060620250520001",
     "alova": "^3.3.4",
     "bignumber.js": "^9.3.1",
     "clsx": "^2.1.1",
@@ -19,12 +18,13 @@
     "pinia": "2.3.1",
     "tailwind-merge": "^3.0.2",
     "vue": "^3.4.38",
-    "vue-i18n": "9.2.2"
+    "vue-i18n": "^9.14.0",
+    "wot-design-uni": "^1.12.4"
   },
   "devDependencies": {
     "@alova/wormhole": "^1.2.0",
     "@dcloudio/types": "^3.4.12",
-    "@dcloudio/vite-plugin-uni": "3.0.0-4010520240507001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-4060620250520001",
     "@iconify/json": "^2.2.346",
     "@iconify/tailwind": "^1.2.0",
     "@tailwindcss/postcss": "^4.1.13",
@@ -54,7 +54,7 @@
     "typescript": "^5.0.0",
     "uni-iconfont-plugin": "^1.0.3",
     "unplugin-auto-import": "^0.18.2",
-    "vite": "5.4.19",
+    "vite": "^5.2.8",
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.2.10",
     "weapp-tailwindcss": "^4.3.0"

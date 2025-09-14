@@ -17,16 +17,7 @@ const WeappTailwindcssDisabled = isH5 || isApp;
 // https://vitejs.dev/config/
 export default defineConfig({
 	resolve: { alias: [{ find: '@', replacement: resolve(__dirname, './') }] },
-	css: {
-		postcss: {
-			plugins: [
-				tailwindcss({
-          base: __dirname
-        })
-			],
-		},
-		preprocessorOptions: { scss: { additionalData: `` } },
-	},
+
 	plugins: [
 		Components({ dts: 'types/components.d.ts', dirs: ['components'], resolvers: [WotResolver()] }),
 		uni(),
@@ -46,13 +37,26 @@ export default defineConfig({
 				'pinia',
 				'vue-i18n',
 				{
+					from: 'wot-design-uni',
+					imports: ['useToast', 'useMessage', 'useNotify', 'CommonUtil'],
+				}, {
 					from: 'alova/client',
 					imports: ['usePagination', 'useRequest'],
-				},
+				}
 			],
 			dts: 'types/auto-imports.d.ts',
 			dirs: ['hooks/**', 'store/**', 'utils/**'],
 			vueTemplate: true,
 		}),
 	],
+	css: {
+		postcss: {
+			plugins: [
+				tailwindcss({
+					base: __dirname
+				})
+			],
+		},
+		preprocessorOptions: { scss: { additionalData: `` } },
+	},
 });

@@ -91,7 +91,7 @@ export const copyText = (val: string) => {
 export const jumpToAppMarket = () => {
 	const googlePlay = 'com.android.vending';
 
-	const androidPackName = 'com.zjwl.benben';
+	const androidPackName = 'xxx';
 	if (plus.os.name == 'Android') {
 		const Uri = plus.android.importClass('android.net.Uri') as any;
 		const Intent = plus.android.importClass('android.content.Intent') as any;
@@ -114,7 +114,7 @@ export const jumpToAppMarket = () => {
 			main.startActivity(intent);
 		}
 	} else {
-		plus.runtime.openURL('itms-apps://itunes.apple.com/cn/app/id6612015886?mt=8');
+		plus.runtime.openURL('itms-apps://itunes.apple.com/cn/app/idxxx?mt=8');
 	}
 };
 
@@ -198,6 +198,3 @@ export const toJumpLinks = (url: string) => {
 	// #endif
 };
 
-export const toWhatsApp = () => {
-	toJumpLinks('https://wa.me/+996770570579');
-};
