@@ -1,8 +1,7 @@
+// import { vueJsx } from '@vitejs/plugin-vue-jsx';
 import uni from '@dcloudio/vite-plugin-uni';
 import Components from '@uni-helper/vite-plugin-uni-components';
 import { WotResolver } from '@uni-helper/vite-plugin-uni-components/resolvers';
-import UniKuRoot from '@uni-ku/root';
-import vueJsx from '@vitejs/plugin-vue-jsx';
 import { resolve } from 'path';
 import AutoImport from 'unplugin-auto-import/vite';
 import { defineConfig, loadEnv } from 'vite';
@@ -39,10 +38,9 @@ export default defineConfig(({ command, mode }) => {
 			preprocessorOptions: { scss: { additionalData: `` } },
 		},
 		plugins: [
-			UniKuRoot({ rootFileName: 'AppRoot' }),
 			Components({ dts: 'types/components.d.ts', dirs: ['components'], resolvers: [WotResolver()] }),
 			uni(),
-			vueJsx(),
+			// vueJsx(),
 			uvwt({
 				rem2rpx: true,
 				disabled: WeappTailwindcssDisabled,
@@ -50,7 +48,16 @@ export default defineConfig(({ command, mode }) => {
 				tailwindcssBasedir: __dirname,
 			}),
 			AutoImport({
-				imports: ['vue', 'uni-app', 'pinia', 'vue-i18n'],
+				imports: [
+					'vue',
+					'uni-app',
+					'pinia',
+					'vue-i18n',
+					{
+						from: 'alova/client',
+						imports: ['usePagination', 'useRequest'],
+					},
+				],
 				dts: 'types/auto-imports.d.ts',
 				dirs: ['hooks/**', 'store/**', 'utils/**'],
 				vueTemplate: true,

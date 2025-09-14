@@ -1,19 +1,26 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"useDefineForClassFields": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"strict": true,
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"resolveJsonModule": true,
 		"jsx": "preserve",
 		"jsxImportSource": "vue",
-		"sourceMap": true,
-		"resolveJsonModule": true,
+		"noImplicitThis": true,
+		"strict": true,
+		"verbatimModuleSyntax": true,
+		"target": "ESNext",
+		"useDefineForClassFields": true,
 		"esModuleInterop": true,
-		"lib": ["esnext", "dom"],
-		"types": ["@dcloudio/types", "@uni-helper/uni-app-types", "wot-design-uni/global"],
-		"paths": { "@/*": ["./*"] }
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"types": ["@dcloudio/types", "@uni-helper/uni-app-types"],
+		"paths": {
+			"@/*": ["./*"]
+		}
 	},
-	"vueCompilerOptions": { "plugins": ["@uni-helper/uni-app-types/volar-plugin"] },
+	"vueCompilerOptions": {
+		"plugins": ["@uni-helper/uni-app-types/volar-plugin"]
+	},
 	"include": ["./*.vue", "./**/*.vue", "./*.nvue", "./**/*.nvue", "./*.ts", "./*.d.ts", "./**/*.ts"]
 }

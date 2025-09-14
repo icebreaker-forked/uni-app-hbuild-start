@@ -17,7 +17,7 @@ const getDomainUrl = () => {
 	if (process.env.NODE_ENV === 'development') {
 		return '192.168.124.121:3001';
 	} else {
-		return 'exp.flypost.cn';
+		return '';
 	}
 };
 

@@ -1,8 +1,8 @@
 <!-- 包裹每个页面的组件，集成一些全局功能 -->
 <template>
-	<view :class="cn('cover-nutui relative mx-auto box-border bg-borurio-bg', ` ${osName}`, $attrs.class as string)">
+	<view :class="cn('cover-nutui relative mx-auto box-border bg-borurio-bg', osName, $attrs.class as string)" >
 		<slot name="header"></slot>
-
+		{{ $t('') }}
 		<view :style="{ paddingTop: `${contentTop}px`, paddingBottom: `${contentBottom}px` }">
 			<slot></slot>
 		</view>
@@ -24,8 +24,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { cn } from '@/utils';
-
 // #ifndef MP-WEIXIN
 defineOptions({
 	inheritAttrs: false,
