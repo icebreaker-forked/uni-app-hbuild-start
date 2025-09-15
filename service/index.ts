@@ -13,28 +13,17 @@ const getBaseUrl = () => {
 	}
 };
 
-const getDomainUrl = () => {
-	if (process.env.NODE_ENV === 'development') {
-		return '192.168.124.121:3001';
-	} else {
-		return '';
-	}
-};
-
 const test = {
 	baseUrl: 'http://192.168.124.18:9096',
-	domainUrl: '192.168.124.18:5049',
 };
 
 // const baseUrl = test.baseUrl;
 // const domainUrl = test.domainUrl;
 
 const baseUrl = getBaseUrl();
-const domainUrl = getDomainUrl();
 
 if (process.env.NODE_ENV === 'development') {
 	console.log('开发环境-BaseUrl-' + baseUrl);
-	console.log('开发环境-DomainUrl-' + domainUrl);
 }
 
 const alovaInst = createAlova({
@@ -91,13 +80,6 @@ const alovaInst = createAlova({
 					toLogin();
 				}
 				throw new Error(t(data.msg) || 'Error');
-			}
-
-			if (header.authorization) {
-				uni.setStorageSync('token', header.authorization);
-			}
-			if (header.Authorization) {
-				uni.setStorageSync('token', header.Authorization);
 			}
 
 			return data.data;
