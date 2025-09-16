@@ -1,3 +1,16 @@
+export const { platform } = uni.getDeviceInfo();
+
+// 是否安卓
+export const isAndroid = platform == 'android';
+
+// 是否苹果
+export const isIos = platform == 'ios';
+
+// 是否小数
+export function isDecimal(value: any): boolean {
+	return String(value).length - String(value).indexOf('.') + 1 > 0;
+}
+
 //正则表达式验证邮箱
 export const isEmail = (email: string) => {
 	const emailReg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
@@ -19,8 +32,7 @@ export const isObject = (obj: any) => {
 	return Object.prototype.toString.call(obj) === '[object Object]';
 };
 
-
-//判断是null或者undefined
-export const isNullOrUndefined = (value: any) => {
-	return value === null || value === undefined;
+// 是否为空
+export function isEmpty(val: any) {
+	return val === '' || val === null || val === undefined;
 }
