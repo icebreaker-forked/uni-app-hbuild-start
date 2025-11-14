@@ -3,7 +3,7 @@
 const { addDynamicIconSelectors } = require("@iconify/tailwind");
 const animate = require("tailwindcss-animate");
 const tailwindcssPlugin = require("tailwindcss/plugin");
-// const cssMacro = require("weapp-tailwindcss/css-macro");
+const cssMacro = require("weapp-tailwindcss/css-macro");
 // const { isMp } = require("./platform");
 
 // function resolve(p) {
@@ -21,6 +21,12 @@ module.exports = {
     require("tailwind-scrollbar")({ preferredStrategy: "pseudoelements", nocompatible: true }),
     require("@tailwindcss/typography"),
     require("tailwindcss-animate"),
+    cssMacro({
+      variantsMap: {
+        "wx": "MP-WEIXIN",
+        "-wx": { value: "MP-WEIXIN", negative: true },
+      },
+    }),
     tailwindcssPlugin(({ addUtilities, addVariant, matchUtilities, theme }) => {
       const os = ["ios", "android"];
       os.forEach((t) => {

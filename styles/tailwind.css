@@ -1,5 +1,7 @@
 @import 'weapp-tailwindcss/css';
 @source not "unpackage";
+
+@plugin "weapp-tailwindcss/css-macro";
 @config "../tailwind.config.js";
 
 
