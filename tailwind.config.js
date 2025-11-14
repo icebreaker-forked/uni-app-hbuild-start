@@ -14,6 +14,7 @@ const tailwindcssPlugin = require("tailwindcss/plugin");
 module.exports = {
   darkMode: ["class"],
   safelist: ["dark"],
+  //  darkMode: ['variant', ':is(.dark &)'],
   plugins: [
     animate,
     addDynamicIconSelectors(),

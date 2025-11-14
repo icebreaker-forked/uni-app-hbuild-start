@@ -95,8 +95,8 @@ defineExpose({
 </script>
 
 <template>
-  <wd-config-provider :theme="themeStore.theme">
-    <view :class="cn('relative box-border min-h-screen  bg-background text-foreground', themeStore.theme, osName, $attrs.class as string)">
+  <wd-config-provider :theme="themeStore.theme" :custom-class="themeStore.theme">
+    <view :class="cn('relative box-border min-h-screen  bg-background text-foreground', osName, $attrs.class as string)">
       <slot name="header" />
       <view :style="{ paddingTop: `${contentTop}px`, paddingBottom: `${contentBottom}px` }">
         <slot />
