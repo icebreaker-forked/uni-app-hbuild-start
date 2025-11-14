@@ -1,5 +1,5 @@
-import type { CnOptions } from "tailwind-variants";
-import { cn as tvCn } from "tailwind-variants";
+import type { CnOptions } from "@weapp-tailwindcss/variants";
+import { cn as tvCn } from "@weapp-tailwindcss/variants";
 import i18n from "@/i18n";
 
 const { t } = i18n.global;

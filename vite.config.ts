@@ -43,7 +43,7 @@ export default defineConfig({
           imports: ["usePagination", "useRequest"],
         },
         {
-          from: "tailwind-variants",
+          from: "@weapp-tailwindcss/variants",
           imports: ["tv", "createTV", "cnBase"],
         },
       ],
@@ -66,5 +66,13 @@ export default defineConfig({
   define: {
     __VUE_I18N_FULL_INSTALL__: true,
     __VUE_I18N_LEGACY_API__: false,
+  },
+  build: {
+    minify: 'esbuild',
+    terserOptions: undefined,
+    rollupOptions: {},
+  },
+  esbuild: {
+    keepNames: true,
   },
 });
