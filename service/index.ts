@@ -43,15 +43,15 @@ instance.interceptors.request.use(
       ...(config.extraConfig ?? {}),
     };
 
-    const hasLoading = config.extraConfig?.showLoading ?? true;
+    const hasLoading = config.extraConfig?.showLoading;
     const loadingText = config.extraConfig?.loadingText;
 
     if (hasLoading) {
       const timer = setTimeout(() => {
         uni.showLoading({
-          title: loadingText || "请求中...",
+          title: loadingText,
         });
-      }, config.extraConfig?.delay ?? 0);
+      }, config.extraConfig.delay);
       config.extraConfig.timer = timer;
     }
     return config;
