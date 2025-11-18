@@ -28,3 +28,10 @@
 .hide-scroll {
 	scrollbar-width: none;
 }
+
+
+/*  #ifdef  H5  */
+svg {
+  display: initial;
+}
+/*  #endif  */
