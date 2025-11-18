@@ -15,7 +15,6 @@ export default uni(
       "n/prefer-global/process": "off",
       "unused-imports/no-unused-vars": "off",
       "regexp/no-unused-capturing-group": "off",
-
     },
 
   },
@@ -44,6 +43,7 @@ export default uni(
     },
     rules: {
       "tailwindcss/no-custom-classname": "off",
+      "tailwindcss/enforces-negative-arbitrary-values": "warn",
     },
   }),
 
