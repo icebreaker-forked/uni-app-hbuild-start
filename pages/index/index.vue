@@ -42,8 +42,7 @@ function handleAnimation() {
     </template>
 
     <view
-      class=""
-      style="width: 100rpx; height: 100rpx; background-color: red"
+      class="size-25 bg-primary"
       :style="{ transform: `translateX(${translateX}px)` }"
     />
     <wd-button @click="handleAnimation">
