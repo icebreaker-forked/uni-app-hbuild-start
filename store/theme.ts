@@ -1,3 +1,4 @@
+import type { ConfigProviderThemeVars } from "wot-design-uni";
 import { defineStore } from "pinia";
 import { store } from "@/store";
 
@@ -8,8 +9,10 @@ export const useThemeStore = defineStore("theme", () => {
     uni.setStorageSync("theme", v);
     theme.value = v;
   };
-
-  return { theme, setTheme };
+  const themeVars: ConfigProviderThemeVars = {
+    // colorTheme: "#637BE7",
+  };
+  return { theme, setTheme, themeVars };
 });
 
 export function useThemeStoreHook() {

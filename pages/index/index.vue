@@ -46,12 +46,8 @@ function handleMessage() {
 </script>
 
 <template>
-  <Container>
-    <template #header>
-      <wd-navbar fixed safe-area-inset-top title="首页" />
-    </template>
-
-    <view class="flex flex-col gap-y-4">
+  <Container title="首页" is-tabbar>
+    <view class="flex flex-col gap-y-4 px-4">
       <view>
         <view class="size-25 bg-primary " :style="{ transform: `translateX(${translateX}px)` }" />
 

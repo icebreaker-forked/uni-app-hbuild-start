@@ -4,9 +4,9 @@ import { storage } from "@/utils/storage";
 
 console.log(pagesJson);
 
-const pageConfig = {
-  home: "/pages/index/index",
-  login: "/pages/login/index",
+export const pageConfig = {
+  home: "pages/index/index",
+  login: "pages/login/index",
 };
 
 type PushOptions
@@ -64,10 +64,12 @@ const router = {
       return [];
     }
   },
-
+  get isCustomTabbar(): boolean {
+    return !!pagesJson.tabBar?.custom;
+  },
   // 全局样式配置
   globalStyle: pagesJson.globalStyle,
-
+  pageConfig,
   // 路由列表
   routes,
 
@@ -256,7 +258,7 @@ const router = {
 
   // 回到首页
   home() {
-    this.push(pageConfig.home);
+    this.push(`/${pageConfig.home}`);
   },
 
   // 跳转 Tab 页
@@ -284,7 +286,7 @@ const router = {
     const { reLaunch = false } = options || {};
 
     this.push({
-      path: pageConfig.login,
+      path: `/${pageConfig.login}`,
       mode: reLaunch ? "reLaunch" : "navigateTo",
       isGuard: false,
     });
@@ -293,7 +295,7 @@ const router = {
   // 登录成功后操作
   nextLogin(type?: string) {
     const pages = getCurrentPages();
-    const index = pages.findIndex(e => pageConfig.login.includes(e.route!));
+    const index = pages.findIndex(e => `/${pageConfig.login}`.includes(e.route!));
 
     if (index <= 0) {
       this.home();

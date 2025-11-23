@@ -5,3 +5,9 @@
 page {
   @apply bg-white text-[#0a0a0a];
 }
+
+.uni-tabbar__bd{
+  /* #ifdef H5 */
+  overflow: hidden;
+  /* #endif */
+}

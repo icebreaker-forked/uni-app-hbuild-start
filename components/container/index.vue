@@ -20,8 +20,14 @@ const props = withDefaults(
     needAuth?: boolean;
     customClass?: string;
     footerClass?: string;
+    title?: string;
+    isTabbar?: boolean;
   }>(),
-  {},
+  {
+    needAuth: true,
+    title: "",
+    isTabbar: false,
+  },
 );
 
 const { osName } = useSystemOs();
@@ -45,17 +51,20 @@ const contentBottom = computed(() => {
 });
 
 onMounted(() => {
+  // #ifdef APP
+  if (router.isCustomTabbar && props.isTabbar) {
+    uni.hideTabBar();
+  }
+  // #endif
   if (slots.footer) {
     getFooterHeight();
   }
 });
 
 onLoad(() => {
-  console.log(router.currentPage());
-
-  // if (!user.token) {
-  //   router.login({ reLaunch: true });
-  // }
+  if (props.needAuth && !user.token) {
+    router.login({ reLaunch: true });
+  }
 });
 
 onShow(() => {});
@@ -76,18 +85,33 @@ defineExpose({
 </script>
 
 <template>
-  <wd-config-provider :theme="themeStore.theme" :custom-class="themeStore.theme">
-    <view :class="cn('relative box-border min-h-screen  bg-background text-foreground', osName, $attrs.class as string)">
-      <slot name="header" />
-      <view :style="{ paddingTop: `${contentTop}px`, paddingBottom: `${contentBottom}px` }">
+  <wd-config-provider :theme="themeStore.theme" :theme-vars="themeStore.themeVars" :custom-class="cn(osName, themeStore.theme)">
+    <view :class="cn('relative box-border min-h-screen  bg-background text-foreground')">
+      <wd-navbar
+        v-if="props.title"
+        custom-class="relative " fixed
+        safe-area-inset-top
+        placeholder bordered
+        :title="props.title"
+      />
+      <view :style="{ paddingBottom: `${contentBottom}px` }" :class="cn('relative', props.customClass)">
         <slot />
       </view>
-      <view id="container_footer" :class="cn('fixed inset-x-0 bottom-0 z-300 box-border', props.footerClass)">
+      <view id="container_footer" :class="cn('fixed inset-x-0 z-300 box-border ', props.isTabbar ? 'bottom-15' : 'bottom-safe bottom-0 ', props.footerClass)">
         <slot name="footer" />
       </view>
+      <QTabbar v-if="props.isTabbar" />
     </view>
 
     <wd-toast />
     <wd-message-box />
   </wd-config-provider>
 </template>
+
+<style lang="scss" scoped>
+:deep(.wd-navbar__content){
+  position: relative;
+  z-index: 1;
+
+}
+</style>

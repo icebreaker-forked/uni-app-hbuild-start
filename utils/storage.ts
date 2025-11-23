@@ -15,6 +15,7 @@ export const storage = {
    */
   info() {
     const { keys } = uni.getStorageInfoSync();
+
     const d: any = {};
 
     keys.forEach((e: string) => {

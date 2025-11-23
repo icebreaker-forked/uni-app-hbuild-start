@@ -18,10 +18,9 @@ interface User {
   };
 }
 
-// 本地缓存
-const data = storage.info();
-
 const useUserStore = defineStore("user", () => {
+  // 本地缓存
+  const data = storage.info();
   // 标识
   const token = ref(data.token || "");
 

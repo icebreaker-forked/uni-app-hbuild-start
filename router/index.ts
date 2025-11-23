@@ -1,4 +1,4 @@
-import { router } from "./router";
+import { pageConfig, router } from "./router";
 
 const ignoreToken = [
   "/pages/login/index",
@@ -21,4 +21,4 @@ router.beforeEach((to, next) => {
   }
 });
 
-export { router };
+export { pageConfig, router };
