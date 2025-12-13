@@ -20,7 +20,7 @@ function onlineChange(res: UniApp.OnNetworkStatusChangeSuccess) {
 }
 
 function stepMessagePush() {
-  const client = uni.getDeviceInfo().osName;
+  const client = DEVICE_INFO.osName;
 
   plus.push.addEventListener(
     "receive",

@@ -6,6 +6,5 @@ export * from "./useI18nSync";
 export * from "./useInfiniteList";
 export * from "./useLocalState";
 export * from "./useNodeBoundingClientRect";
-export * from "./useSystemOs";
 export * from "./useTheme";
 export * from "./useZPaging";

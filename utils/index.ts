@@ -26,14 +26,7 @@ export function getOpenerEventChannel() {
  * @returns 根据尺寸转换后的值
  */
 export function pt(num: number) {
-  const { screenWidth } = uni.getWindowInfo();
-  return num * (screenWidth / 375);
-}
-
-export function getCurrentPage() {
-  const pages = getCurrentPages();
-  const currentPage = pages[pages.length - 1];
-  return currentPage;
+  return num * (WINDOW_INFO.screenWidth / 375);
 }
 
 // uuid

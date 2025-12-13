@@ -18,8 +18,6 @@ const props = withDefaults(
   },
 );
 
-const { osName } = useSystemOs();
-
 const themeStore = useThemeStore();
 
 onShow(() => {});
@@ -27,7 +25,7 @@ onShow(() => {});
 
 <template>
   <wd-config-provider
-    :theme="themeStore.theme" :theme-vars="themeStore.themeVars" :custom-class="cn(osName, themeStore.theme, 'cover-wd', customClass)"
+    :theme="themeStore.theme" :theme-vars="themeStore.themeVars" :custom-class="cn(DEVICE_INFO.osName, themeStore.theme, 'cover-wd', customClass)"
     :custom-style="`${customStyle}--custom-navbar-height:${getCustomNavHeight()}px;`"
   >
     <slot />

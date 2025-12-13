@@ -3,9 +3,7 @@
  */
 export default function useAndroidMoveTaskToBack() {
   onBackPress(() => {
-    const deviceInfo = uni.getDeviceInfo();
-
-    if (deviceInfo.platform === "android") {
+    if (DEVICE_INFO.osName === "android") {
       const main = plus.android.runtimeMainActivity() as any;
       plus.runtime.quit = function () {
         main?.moveTaskToBack(false);

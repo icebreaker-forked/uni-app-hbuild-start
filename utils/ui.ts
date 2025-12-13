@@ -81,13 +81,11 @@ export function getCustomNavHeight() {
   let headerHeight = 44;
 
   // #ifdef MP-WEIXIN
-  const menuButtonBounding = uni.getMenuButtonBoundingClientRect();
-  headerHeight = menuButtonBounding.top + menuButtonBounding.height + 5;
+  headerHeight = headerHeight + getSafeArea().safeTop;
   // #endif
 
   // #ifdef APP-PLUS
-  const statusBarHeight = uni.getWindowInfo().statusBarHeight;
-  headerHeight = 44 + (statusBarHeight ?? 0);
+  headerHeight = 44 + (WINDOW_INFO.statusBarHeight ?? 0);
   // #endif
 
   // // #ifdef H5
