@@ -1,34 +1,35 @@
-
-
 .cover-wd {
-  --wot-color-theme:var(--primary);
-  --wot-dark-color:var(--foreground);
-  --wot-dark-background:var(--background);
-  --wot-color-border-light:var(--border);
+	--wot-color-theme: var(--primary);
+	--wot-dark-color: var(--foreground);
+	--wot-dark-background: var(--background);
+	--wot-color-border-light: var(--border);
 }
 
 
 
-.uni-tabbar__bd{
-  /* #ifdef H5 */
-  overflow: hidden;
-  /* #endif */
+.uni-tabbar__bd {
+	/* #ifdef H5 */
+	overflow: hidden;
+	/* #endif */
 }
 
 .aspect-square {
 	aspect-ratio: 1 / 1;
 }
+
 @supports not (aspect-ratio: 1 / 1) {
 	.aspect-square {
 		position: relative;
 		width: 100%;
 	}
+
 	.aspect-square::before {
 		content: '';
 		display: block;
 		padding-top: 100%;
 	}
-	.aspect-square > * {
+
+	.aspect-square>* {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -38,13 +39,6 @@
 	}
 }
 
-/* #ifdef H5 */
-:deep(.hide-scroll::-webkit-scrollbar) {
-	display: none;
-}
-
-/* #endif */
-
 
 .hide-scroll {
 	scrollbar-width: none;
@@ -52,7 +46,11 @@
 
 
 /*  #ifdef  H5  */
+:deep(.hide-scroll::-webkit-scrollbar) {
+	display: none;
+}
+
 svg {
-  display: initial;
+	display: initial;
 }
 /*  #endif  */
