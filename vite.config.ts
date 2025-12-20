@@ -1,4 +1,5 @@
 import path, { resolve } from "node:path";
+// @ts-ignore
 import uni from "@dcloudio/vite-plugin-uni";
 import tailwindcss from "@tailwindcss/postcss";
 import Components from "@uni-helper/vite-plugin-uni-components";
@@ -21,6 +22,9 @@ export default defineConfig({
       disabled: WeappTailwindcssDisabled,
       rem2rpx: true,
       cssPresetEnv: {},
+      customAttributes: {
+        "*": [/[A-Za-z-]*[Cc]lass/, "custom-class"],
+      },
       tailwindcss: {
         v4: {
           base: __dirname,

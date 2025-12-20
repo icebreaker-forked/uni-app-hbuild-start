@@ -46,6 +46,10 @@ function handleAnimation() {
         </wd-button>
       </view>
 
+      <wd-button type="primary" custom-class=" w-20! rounded-lg! bg-amber-300!">
+        Custom Button
+      </wd-button>
+
       <view class="fixed right-4 bottom-40 flex-center size-12 rounded-full bg-foreground text-background opacity-90 shadow" @click="themeStore.setTheme(themeStore.theme === 'light' ? 'dark' : 'light')">
         <view v-if="themeStore.theme === 'light'" class="icon-[akar-icons--moon] text-lg" />
         <view v-else class="icon-[akar-icons--sun] text-lg" />

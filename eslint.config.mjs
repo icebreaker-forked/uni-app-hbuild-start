@@ -18,6 +18,9 @@ export default uni(
       "n/prefer-global/process": "off",
       "unused-imports/no-unused-vars": "off",
       "regexp/no-unused-capturing-group": "off",
+      "ts/ban-ts-comment": "off",
+      // 关闭单行 HTML 元素内容自动换行
+      "vue/singleline-html-element-content-newline": "off",
       "vue/max-attributes-per-line": [
         "error",
         {
