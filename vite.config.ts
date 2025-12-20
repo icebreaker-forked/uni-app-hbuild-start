@@ -25,7 +25,7 @@ export default defineConfig({
       customAttributes: {
         "*": [/[A-Za-z-]*[Cc]lass/, "custom-class"],
       },
-      cssEntries: [path.resolve(__dirname, "./styles/tailwind.css")],
+      cssEntries: [path.resolve(__dirname, "./tailwind.css")],
     }),
     AutoImport({
       imports: [
