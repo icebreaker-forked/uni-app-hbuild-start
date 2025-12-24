@@ -42,6 +42,9 @@ function handleLogin() {
 <template>
   <container-paging title="登录" :need-auth="false">
     <view class="flex flex-col gap-y-5 px-5 pt-5">
+    <wd-button type="primary" custom-class=" w-20! rounded-lg! bg-amber-300!">
+        Custom Button
+      </wd-button>
       <wd-form
         ref="form" :model="formData"
         error-type="none" custom-class="flex flex-col gap-y-5"
