@@ -64,7 +64,7 @@ export default defineConfig({
     __VUE_I18N_LEGACY_API__: false,
   },
   build: {
-    minify: "esbuild",
+    minify: false,
     terserOptions: undefined,
     rollupOptions: {},
   },
